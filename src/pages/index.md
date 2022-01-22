@@ -14,7 +14,7 @@ intro:
   blurbs:
     - image: /img/pp-logo.svg
       text: pixelpandas.com
-    - image: https://poketcgshop.s3.amazonaws.com/site-images/tcg-app-small.svg
+    - image: /img/tcg-app-small.svg
       text: poketcg.app
   heading: What we offer
   description: >
