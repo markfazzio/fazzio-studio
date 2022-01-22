@@ -9,6 +9,9 @@ description: 'On the XJ Cherokee, particularly talking about the 1997-2001 model
   "leather" (vinyl) Limited trim seats. '
 featuredpost: true
 featuredimage: /img/cqzp8974-1024x768.jpeg
+tags:
+  - tech-articles
+  - installs
 ---
 ![](http://markfazzio.com/wp-content/uploads/2020/02/CQZP8974-1024x768.jpg)
 
