@@ -14,8 +14,10 @@ intro:
   blurbs:
     - image: /img/pp-logo.svg
       text: pixelpandas.com
+      url: http://pixelpandas.com
     - image: /img/tcg-app-small.svg
       text: poketcg.app
+      url: http://poketcg.app
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
