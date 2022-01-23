@@ -25,6 +25,7 @@ export const IndexPageTemplate = ({
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section--soundcloud">
         <iframe
+          title="MarkFazzio SoundCloud Playlist"
           width="100%"
           height="300"
           scrolling="no"

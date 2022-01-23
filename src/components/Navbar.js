@@ -64,7 +64,7 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-start has-text-centered">
               <div className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">Projects</a>
+                <div className="navbar-link">Projects</div>
 
                 <div className="navbar-dropdown">
                   <Link className="navbar-item" to="/js-algorithms">

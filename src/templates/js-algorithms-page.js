@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { light } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import Layout from "../components/Layout";
 
@@ -39,9 +39,16 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
                   <article class="tile is-child box">
                     <p class="title">{item.title}</p>
                     <p class="subtitle">{item.description}</p>
-                    <SyntaxHighlighter language="javascript" style={light}>
-                      {item.code}
-                    </SyntaxHighlighter>
+                    {item.code && item.code.code ? (
+                      <SyntaxHighlighter
+                        language="javascript"
+                        style={materialLight}
+                      >
+                        {item.code.code}
+                      </SyntaxHighlighter>
+                    ) : (
+                      <p>No code yet for this problem.</p>
+                    )}
                   </article>
                 </div>
               ))}
@@ -97,7 +104,9 @@ export const pageQuery = graphql`
           algorithms {
             title
             description
-            code
+            code {
+              code
+            }
           }
         }
       }

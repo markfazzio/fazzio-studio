@@ -1,4 +1,6 @@
 ---
+templateKey: js-algorithms-page
+path: /js-algorithms
 title: Typescript Algorithms
 description: Answers to common problems using Typescript.
 intro:
