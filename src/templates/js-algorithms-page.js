@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 
 // eslint-disable-next-line
 export const JSAlgorithmsPageTemplate = ({
@@ -13,8 +11,6 @@ export const JSAlgorithmsPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
-
   return (
     <div>
       <section className="section section--gradient">
@@ -31,11 +27,27 @@ export const JSAlgorithmsPageTemplate = ({
                       <p>{description}</p>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div class="tile is-ancestor">
+          {intro && intro.algorithms ? (
+            <>
+              {intro.algorithms.map((item) => (
+                <div class="tile is-parent is-4">
+                  <article class="tile is-child box">
+                    <p class="title">{item.title}</p>
+                    <p class="subtitle">{item.description}</p>
+                    <pre>{item.code}</pre>
+                  </article>
+                </div>
+              ))}
+            </>
+          ) : undefined}
         </div>
       </section>
     </div>
@@ -47,7 +59,7 @@ JSAlgorithmsPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    algorithms: PropTypes.array,
   }),
 };
 
@@ -83,18 +95,11 @@ export const pageQuery = graphql`
         title
         description
         intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-              extension
-              publicURL
-            }
-            text
+          algorithms {
+            title
+            description
+            code
           }
-          heading
-          description
         }
       }
     }
