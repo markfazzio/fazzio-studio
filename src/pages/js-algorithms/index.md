@@ -118,4 +118,21 @@ intro:
             return returnStr;
           };
         lang: javascript
+    - code:
+        code: >-
+          const capitalizeEachFirstLetter = (inputString: string): string => {
+            // split on words, not letters by using ' '
+            const strArr = inputString.toLowerCase().split(' ');
+            
+            for (let i = 0; i < strArr.length; i++) {
+              strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+            }
+            
+            // re-create the sentence
+            return strArr.join(' ');
+          };
+        lang: javascript
+      title: Capitalize First Letter of Each Word
+      description: Return a string with each word having the first letter capitalized
+        from an input string sentence.
 ---
