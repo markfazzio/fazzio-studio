@@ -14,10 +14,22 @@ const FeatureGrid = ({ gridItems }) => (
                 display: "inline-block",
               }}
             >
-              <PreviewCompatibleImage imageInfo={item} />
+              <a href={item.url} target="_blank" rel="noreferrer">
+                <PreviewCompatibleImage imageInfo={item} />
+              </a>
             </div>
           </div>
-          <p>{item.text}</p>
+
+          <div className="has-text-centered mt-2">
+            <a
+              className="button is-link"
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {item.text}
+            </a>
+          </div>
         </section>
       </div>
     ))}

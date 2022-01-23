@@ -46,16 +46,9 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
+                      Latest Posts
                     </h3>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
@@ -137,6 +130,8 @@ export const pageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
               }
+              extension
+              publicURL
             }
             text
           }
