@@ -3,7 +3,7 @@ templateKey: index-page
 title: Mark Fazzio
 image: /img/home-jumbotron.jpg
 heading: Latest Projects
-subheading: App Developer / Car Enthusiast
+subheading: App Developer / Musician / Car Enthusiast
 mainpitch:
   title: Welcome
   description: >
