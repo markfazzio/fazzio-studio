@@ -75,4 +75,24 @@ intro:
             });
           };
         lang: javascript
+    - title: Longest Word of a Sentence
+      description: Determine longest word (or words if there is a tie in length) from
+        input sentence string
+      code:
+        code: >-
+          const getLongestWord = (sentence: string): string | Array<string> => {
+            const wordArr = sentence.toLowerCase().match(/[a-z0-9]+/g);
+            const sorted = wordArr.sort((a: string, b: string) => b.length - a.length);
+            
+            // if multiple words, insert into array
+            const longestWordArr = sorted.filter((word: string) => word.length === sorted[0].length);
+            
+            // Check if more than one array value
+            if (longestWordArr.length === 1) {
+               return longestWordArr[0];
+            } else {
+               return longestWordArr;
+            }
+          };
+        lang: javascript
 ---
