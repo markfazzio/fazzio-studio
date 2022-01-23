@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { light } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import Layout from "../components/Layout";
 
 // eslint-disable-next-line
-export const JSAlgorithmsPageTemplate = ({
-  image,
-  title,
-  description,
-  intro,
-}) => {
+export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
   return (
     <div>
       <section className="section section--gradient">
@@ -42,7 +39,9 @@ export const JSAlgorithmsPageTemplate = ({
                   <article class="tile is-child box">
                     <p class="title">{item.title}</p>
                     <p class="subtitle">{item.description}</p>
-                    <pre>{item.code}</pre>
+                    <SyntaxHighlighter language="javascript" style={light}>
+                      {item.code}
+                    </SyntaxHighlighter>
                   </article>
                 </div>
               ))}

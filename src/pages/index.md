@@ -15,12 +15,15 @@ intro:
     - image: /img/asset-1.svg
       text: JS Algorithms
       url: js-algorithms
+      target: internal
     - image: /img/tcg-app-small.svg
       text: poketcg.app
       url: http://poketcg.app
+      target: external
     - image: /img/pp-logo.svg
       text: pixelpandas.com
       url: http://pixelpandas.com
+      target: external
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
