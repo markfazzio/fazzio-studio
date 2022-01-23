@@ -135,4 +135,15 @@ intro:
       title: Capitalize First Letter of Each Word
       description: Return a string with each word having the first letter capitalized
         from an input string sentence.
+    - title: Vowel Checker
+      description: Check if letter is a vowel, return a boolean.
+      code:
+        code: |-
+          const isVowelLetter = (letter: string): boolean => {
+            if (typeof letter !== 'string')
+              return false;
+            
+            const returnArr = letter.match(/[aeiou]/gi);
+            return returnArr && returnArr.length > 0;
+          };
 ---
