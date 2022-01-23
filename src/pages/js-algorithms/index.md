@@ -58,4 +58,11 @@ intro:
             const revString = inputString.split('').reverse().join('');
             return revString === str;
           };
+    - title: Simple Anagram Checker
+      description: Return true if input strings are anagrams of each other.
+      code:
+        code: >-
+          const isAnagram = (aString: string, bString: string): boolean => {
+            return aString.split('').sort().join('') === bString.split('').sort().join('');
+          };
 ---
