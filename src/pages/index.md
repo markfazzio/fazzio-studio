@@ -8,7 +8,7 @@ mainpitch:
   title: Welcome
   description: >
     My name is Mark. I am a software engineer with too many hobbies. This site
-    was built to highlight a few of them.
+    was built using Gatsby 4 + NetlifyCMS to highlight a few of them.
 description: Here are some projects I have been working on.
 intro:
   blurbs:
@@ -31,19 +31,15 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+  heading: a
+  description: "\n"
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: a
+    image: /img/asset-1.svg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: a
+    image: /img/asset-1.svg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: a
+    image: /img/asset-1.svg
 ---
