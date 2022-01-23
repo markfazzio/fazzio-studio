@@ -166,6 +166,7 @@ collections:
                       [
                         { label: Image, name: image, widget: image },
                         { label: Text, name: text, widget: text },
+                        { label: URL, name: url, widget: string },
                       ],
                   },
                 ],
