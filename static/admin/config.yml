@@ -168,7 +168,12 @@ collections:
                       [
                         { label: Title, name: title, widget: string },
                         { label: Description, name: description, widget: text },
-                        { label: Code, name: code, widget: code },
+                        {
+                          label: Code,
+                          name: code,
+                          widget: code,
+                          options: { default_language: "JavaScript" },
+                        },
                       ],
                   },
                 ],

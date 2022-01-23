@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import Layout from "../components/Layout";
 
@@ -31,14 +32,16 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
         </div>
       </section>
       <section>
-        <div class="tile is-ancestor">
+        <div className="code-grid">
           {intro && intro.algorithms ? (
-            <>
-              {intro.algorithms.map((item) => (
-                <div class="tile is-parent is-4">
-                  <article class="tile is-child box">
-                    <p class="title">{item.title}</p>
-                    <p class="subtitle">{item.description}</p>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 1023: 3, 1408: 4 }}
+            >
+              <Masonry gutter="15px">
+                {intro.algorithms.map((item) => (
+                  <div className="code-tile box">
+                    <p className="title">{item.title}</p>
+                    <p className="subtitle">{item.description}</p>
                     {item.code && item.code.code ? (
                       <SyntaxHighlighter
                         language="javascript"
@@ -49,10 +52,10 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
                     ) : (
                       <p>No code yet for this problem.</p>
                     )}
-                  </article>
-                </div>
-              ))}
-            </>
+                  </div>
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
           ) : undefined}
         </div>
       </section>
