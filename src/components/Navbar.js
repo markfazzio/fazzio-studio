@@ -63,6 +63,31 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
+              <div className="navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link">Projects</a>
+
+                <div className="navbar-dropdown">
+                  <Link className="navbar-item" to="/js-algorithms">
+                    JS Algorithms
+                  </Link>
+                  <a
+                    className="navbar-item"
+                    href="http://pixelpandas.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    PixelPandas LLC
+                  </a>
+                  <a
+                    className="navbar-item"
+                    href="http://poketcg.app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    PokeTCG App
+                  </a>
+                </div>
+              </div>
               <Link className="navbar-item" to="/about">
                 About
               </Link>
