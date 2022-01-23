@@ -27,6 +27,7 @@
     "prop-types": "^15.6.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.0.0",
     "sass": "^1.43.2",
     "uuid": "^8.0.0"
@@ -39,7 +40,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

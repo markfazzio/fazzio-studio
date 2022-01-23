@@ -12,17 +12,58 @@ import FullWidthImage from "../components/FullWidthImage";
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
+  // heading,
   subheading,
   mainpitch,
-  description,
+  // description,
   intro,
 }) => {
   const heroImage = getImage(image) || image;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
+      <section className="section--soundcloud">
+        <iframe
+          width="100%"
+          height="300"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1202178046&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        />
+        <div className="site-title-wrapper has-text-centered">
+          <div className="site-title">
+            <h1
+              style={{
+                boxShadow:
+                  "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                backgroundColor: "rgb(255, 68, 0)",
+                color: "white",
+                lineHeight: "1",
+                padding: "0.25rem",
+              }}
+              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            >
+              {title}
+            </h1>
+            <h2
+              style={{
+                boxShadow:
+                  "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                backgroundColor: "rgb(255, 68, 0)",
+                color: "white",
+                lineHeight: "1",
+                padding: "0.25rem",
+                marginTop: "0.5rem",
+              }}
+              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            >
+              {subheading}
+            </h2>
+          </div>
+        </div>
+      </section>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -37,14 +78,7 @@ export const IndexPageTemplate = ({
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
                   </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
+
                   <Features gridItems={intro.blurbs} />
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
