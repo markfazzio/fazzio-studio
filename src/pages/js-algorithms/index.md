@@ -65,4 +65,14 @@ intro:
           const isAnagram = (aString: string, bString: string): boolean => {
             return aString.split('').sort().join('') === bString.split('').sort().join('');
           };
+    - title: Simple Array Flatten
+      description: Return single array from array of arrays.
+      code:
+        code: >-
+          const flattenArray = (inputArrays: Array<any>): Array<any> => {
+            return inputArrays.reduce((arrayA: Array<any>, arrayB: Array<any>) => {
+              return arrayA.concat(arrayB);
+            });
+          };
+        lang: javascript
 ---
