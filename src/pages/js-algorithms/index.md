@@ -50,4 +50,12 @@ intro:
               ""
             );
           };
+    - title: Simple Palendrome Checker
+      description: Return true if input is palendrome, false if not.
+      code:
+        code: |-
+          const isPalendrome = (inputString: string): boolean => {
+            const revString = inputString.split('').reverse().join('');
+            return revString === str;
+          };
 ---
