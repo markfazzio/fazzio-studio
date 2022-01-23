@@ -95,4 +95,27 @@ intro:
             }
           };
         lang: javascript
+    - title: Classic "FizzBuzz"
+      description: 'Loop from start to finish number. For multiples of 3, instead of
+        the number, print "Fizz".  For multiples of 5, print "Buzz". For
+        multiples of both 3 and 5, return "FizzBuzz". '
+      code:
+        code: >-
+          const printFizzBuzzToConsole = (start: number, end: number): string =>
+          {
+            let returnStr: string = '';
+            
+            for (let i = start; i <= end; i++) {
+               if (i % 15 === 0) {
+                 returnStr += 'FizzBuzz';
+               } else if (i % 3 === 0) {
+                 returnStr += 'Fizz';
+               } else if (i % 5 === 0) {
+                 returnStr += 'Buzz';
+               }
+            }
+            
+            return returnStr;
+          };
+        lang: javascript
 ---
