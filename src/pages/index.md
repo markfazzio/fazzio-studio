@@ -12,12 +12,15 @@ mainpitch:
 description: Here are some projects I have been working on.
 intro:
   blurbs:
-    - image: /img/pp-logo.svg
-      text: pixelpandas.com
-      url: http://pixelpandas.com
+    - image: /img/asset-1.svg
+      text: JS Algorithms
+      url: js-algorithms
     - image: /img/tcg-app-small.svg
       text: poketcg.app
       url: http://poketcg.app
+    - image: /img/pp-logo.svg
+      text: pixelpandas.com
+      url: http://pixelpandas.com
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
