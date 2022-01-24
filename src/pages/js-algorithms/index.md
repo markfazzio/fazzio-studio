@@ -146,4 +146,16 @@ intro:
             const returnArr = letter.match(/[aeiou]/gi);
             return returnArr && returnArr.length > 0;
           };
+    - title: Sum Array of Numbers
+      description: Get sum from array of numbers.
+      code:
+        code: |-
+          const sumNumbersFromArray(numbersArray: Array<number>): number => {
+            let result: number = 0;
+            for (const number of numbersArray) {
+              result += number;
+            }
+            return result;
+          };
+        lang: typescript
 ---
