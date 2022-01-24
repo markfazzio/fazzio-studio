@@ -13,7 +13,7 @@ description: Here are some projects I have been working on.
 intro:
   blurbs:
     - image: /img/asset-1.svg
-      text: JS Algorithms
+      text: TS Algorithms
       url: js-algorithms
       target: internal
     - image: /img/tcg-app-small.svg
