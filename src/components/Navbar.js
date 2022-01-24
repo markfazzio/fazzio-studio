@@ -68,7 +68,7 @@ const Navbar = class extends React.Component {
 
                 <div className="navbar-dropdown">
                   <Link className="navbar-item" to="/js-algorithms">
-                    JS Algorithms
+                    Typescript Algorithms
                   </Link>
                   <a
                     className="navbar-item"

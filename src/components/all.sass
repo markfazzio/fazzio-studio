@@ -1,14 +1,19 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+
+
 // Config vars
 // Kaldi logo brand color: #FD461E
-$fazzio-studio-red: #D64000
-$fazzio-studio-red-invert: #fff
+$fazzio-studio-blue: #1B1E6C
+$fazzio-studio-blue-invert: #fff
 
-$primary: $fazzio-studio-red
-$primary-invert: $fazzio-studio-red-invert
+$primary: $fazzio-studio-blue
+$primary-invert: $fazzio-studio-blue-invert
 $body-color: #333
 $black: #2b2523
+
+// bulma overrides
+$blue: $fazzio-studio-blue
 
 .navbar .navbar-menu
   box-shadow: none !important
@@ -88,9 +93,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $fazzio-studio-red-invert
-$menu-item-active-background-color:	$fazzio-studio-red-invert
-$menu-list-border-left: 1px solid $fazzio-studio-red-invert
+$menu-item-active-color: $fazzio-studio-blue-invert
+$menu-item-active-background-color:	$fazzio-studio-blue-invert
+$menu-list-border-left: 1px solid $fazzio-studio-blue-invert
 $menu-label-color: $white-ter
 
 
@@ -115,7 +120,7 @@ $menu-label-color: $white-ter
 // landing
 .section--soundcloud
   position: relative
-  height: 300px
+  height: 280px
   overflow: hidden
 .section--soundcloud iframe
   position: absolute
@@ -125,11 +130,17 @@ $menu-label-color: $white-ter
   z-index: 3
   bottom: 0
   width: 100%
-  height: 230px
+  height: 205px
   padding-top: 40px
   background: rgba(255,255,255,.8)
 .section--soundcloud .site-title
   display: inline-block
+.section--soundcloud .site-title .subtitle
+  background-color: #1B1E6C
+  color: white
+  line-height: 1
+  padding: 0.25rem .75rem 0.3rem
+  border-radius: 1rem
 
 // blog roll
 .blog-list-item header
@@ -138,12 +149,77 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%
   margin: 0 1.5em 0 0
+.blog-image
+  height: 200px
+.blog-image .title,
+.blog-image .subtitle
+  color: #fff
 
 // algorithms
 .code-grid
   padding: 0 15px
 .box.code-tile
   margin: 0 !important
+
+// about
+.about-page .content h1,
+.about-page .content h2,
+.about-page .content h3,
+.about-page .content h4,
+.about-page .content h5
+  color: $fazzio-studio-blue
+
+// custom divider
+
+@keyframes bar 
+  0%
+    background-position: 0%
+  100%
+    background-position: 200%
+
+$bg: #10111F
+$barsize: 15px
+
+.hr 
+  width: 100%
+  height: 1px
+  display: block
+  position: relative
+  margin-bottom: 0em
+
+.hr:after,
+.hr:before
+  content: ""
+  position: absolute
+  width: 100%
+  height: 1px
+  bottom: 50%
+  left: 0
+
+.hr:before
+  background: linear-gradient( 90deg, $bg 0%, $bg 50%, transparent 50%, transparent 100% )
+  background-size: $barsize
+  background-position: center
+  z-index: 1
+
+.hr:after
+  transition: opacity 0.3s ease, animation 0.3s ease
+  background: linear-gradient(to right, #62efab 5%, #F2EA7D 15%, #F2EA7D 25%, #FF8797 35%, #FF8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%)
+  background-size: 200%
+  background-position: 0%
+  animation: bar 15s linear infinite
+
+.hr.anim:before
+  background: linear-gradient(90deg, $bg 0%, $bg 5%, transparent 5%, transparent 10%, $bg 10%, $bg 15%, transparent 15%, transparent 20%, $bg 20%, $bg 25%,transparent 25%, transparent 30%,$bg 30%, $bg 35%, transparent 35%, transparent 40%, $bg 40%, $bg 45%, transparent 45%, transparent 50%, $bg 50%, $bg 55%,transparent 55%, transparent 60%,$bg 60%, $bg 65%,transparent 65%, transparent 70%, $bg 70%, $bg 75%, transparent 75%, transparent 80%, $bg 80%, $bg 85%,transparent 85%, transparent 90%,$bg 90%, $bg 95%, transparent 95%, transparent 100% )
+  background-size: $barsize * 10
+  background-position: center
+  z-index: 1
+  animation: bar 120s linear infinite
+
+.hr.anim:before:hover:before
+  animation-duration: 20s
+.hr.anim:before:hover:after
+  animation-duration: 2s
 
 @import "~bulma"
 @import "bulma/sass/helpers/spacing.sass"
@@ -164,3 +240,8 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+
++widescreen
+  .is-size-0-widescreen
+    font-size: 5rem !important
+  

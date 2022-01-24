@@ -25,64 +25,54 @@ export const IndexPageTemplate = ({
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section--soundcloud">
         <iframe
-          title="MarkFazzio SoundCloud Playlist"
+          title="Mark Fazzio SoundCloud Piano Playlist"
           width="100%"
           height="300"
           scrolling="no"
           frameBorder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1384186123&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        />
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1384186123&color=%231b1e6c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        ></iframe>
         <div className="site-title-wrapper has-text-centered">
           <div className="site-title">
-            <h1
-              style={{
-                boxShadow:
-                  "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                backgroundColor: "rgb(255, 68, 0)",
-                color: "white",
-                lineHeight: "1",
-                padding: "0.25rem",
-              }}
-              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-            >
+            <h1 className="title has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-0-widescreen">
               {title}
             </h1>
-            <h2
-              style={{
-                boxShadow:
-                  "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                backgroundColor: "rgb(255, 68, 0)",
-                color: "white",
-                lineHeight: "1",
-                padding: "0.25rem",
-                marginTop: "0.5rem",
-              }}
-              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            >
-              {subheading}
+            <h2 className="subtitle has-text-weight-bold">
+              <small>{subheading}</small>
             </h2>
           </div>
         </div>
       </section>
+      <b className="hr anim" />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div className="column">
                 <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-
+                  <h1 className="title is-size-2 has-text-primary">
+                    {mainpitch.title}
+                  </h1>
+                  <p className="subtitle">{mainpitch.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <b className="hr anim" />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column">
+                <div className="content">
+                  <h3 className="has-text-weight-semibold has-text-primary is-size-3">
+                    Current Projects
+                  </h3>
                   <Features gridItems={intro.blurbs} />
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
+                    <h3 className="has-text-weight-semibold has-text-primary is-size-3">
                       Latest Posts
                     </h3>
                     <BlogRoll />
