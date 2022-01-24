@@ -6,6 +6,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import Divider from "../components/Divider";
 // import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
@@ -31,7 +32,7 @@ export const IndexPageTemplate = ({
           scrolling="no"
           frameBorder="no"
           src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1384186123&color=%231b1e6c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        ></iframe>
+        />
         <div className="site-title-wrapper has-text-centered">
           <div className="site-title">
             <h1 className="title has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-0-widescreen">
@@ -43,7 +44,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      <b className="hr anim" />
+      <Divider />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -60,7 +61,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      <b className="hr anim" />
+      <Divider />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -71,15 +72,30 @@ export const IndexPageTemplate = ({
                     Current Projects
                   </h3>
                   <Features gridItems={intro.blurbs} />
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold has-text-primary is-size-3">
-                      Latest Posts
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Divider />
+      <section className="section section--gradient has-background-light	">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column">
+                <div className="content">
+                  <div className="columns is-multiline">
+                    <div className="column">
+                      <h3 className="has-text-weight-semibold has-text-primary is-size-3">
+                        Latest Posts
+                      </h3>
+                      <BlogRoll />
+                      <div className="column is-12 has-text-centered">
+                        <Link className="btn" to="/blog">
+                          Read more
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,11 +153,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
         heading
         subheading
         mainpitch {
