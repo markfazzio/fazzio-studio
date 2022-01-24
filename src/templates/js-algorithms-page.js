@@ -40,8 +40,10 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
               <Masonry gutter="15px">
                 {intro.algorithms.map((item) => (
                   <div className="code-tile box">
-                    <p className="title">{item.title}</p>
-                    <p className="subtitle">{item.description}</p>
+                    <p className="title is-size-4">{item.title}</p>
+                    <p className="subtitle">
+                      <small>{item.description}</small>
+                    </p>
                     {item.code && item.code.code ? (
                       <SyntaxHighlighter
                         language="javascript"
