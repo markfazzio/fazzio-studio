@@ -147,10 +147,10 @@ intro:
             return returnArr && returnArr.length > 0;
           };
     - title: Sum Array of Numbers
-      description: Get sum from array of numbers.
+      description: Return sum from array of numbers.
       code:
         code: |-
-          const sumNumbersFromArray(numbersArray: Array<number>): number => {
+          const sumNumbersFromArray = (numbersArray: Array<number>): number => {
             let result: number = 0;
             for (const number of numbersArray) {
               result += number;
