@@ -13,6 +13,11 @@ $black: #2b2523
 // bulma overrides
 $blue: $fazzio-studio-blue
 
+.button--icon   
+  svg
+    width: 1.3rem
+  
+
 .navbar .navbar-menu
   box-shadow: none !important
 
@@ -74,8 +79,15 @@ $blue: $fazzio-studio-blue
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
-  color: $primary
+.navbar-item,
+.navbar-link
+  &.is-active
+    color: $fazzio-studio-blue !important
+    &::after
+      border-color: $fazzio-studio-blue !important
+  .icon
+    color: $primary
+
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
@@ -215,10 +227,14 @@ $dark-navy: #151618
 @import "~bulma"
 @import "bulma/sass/helpers/color.sass"
 @import "bulma/sass/helpers/spacing.sass"
+@import "bulma/sass/helpers/typography.sass"
 @import "bulma/sass/utilities/animations.sass"
 @import "bulma/sass/grid/tiles.sass"
 @import "bulma/sass/components/dropdown.sass"
 @import "bulma/sass/components/navbar.sass"
+
+.navbar-item img
+  width: 100%
 
 // responsiveness
 +tablet-only

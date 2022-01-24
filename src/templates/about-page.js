@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+
+// components
+import IconPDF from "../components/IconPDF";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+
+import resumeFile from "../img/mark-fazzio-resume.pdf";
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -12,11 +17,18 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     <section className="section section--gradient about-page">
       <div className="container">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-primary">
-                {title}
-              </h2>
+          <div className="column">
+            <div className="box">
+              <div className="columns">
+                <div className="column">
+                  <h1 className="title">{title}</h1>
+                </div>
+                <div className="column has-text-right">
+                  <a className="button button--icon" href={resumeFile} download>
+                    <IconPDF />
+                  </a>
+                </div>
+              </div>
               <PageContent className="content" content={content} />
             </div>
           </div>
