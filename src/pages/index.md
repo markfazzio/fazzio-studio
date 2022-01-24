@@ -30,16 +30,4 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-main:
-  heading: a
-  description: "\n"
-  image1:
-    alt: a
-    image: /img/asset-1.svg
-  image2:
-    alt: a
-    image: /img/asset-1.svg
-  image3:
-    alt: a
-    image: /img/asset-1.svg
 ---

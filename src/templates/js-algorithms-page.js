@@ -19,10 +19,10 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
                 <div className="content">
                   <div className="columns">
                     <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 title">
                         {title}
                       </h3>
-                      <p>{description}</p>
+                      <p className="subtitle">{description}</p>
                     </div>
                   </div>
                 </div>
