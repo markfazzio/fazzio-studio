@@ -12,7 +12,7 @@ mainpitch:
 description: Here are some projects I have been working on.
 intro:
   blurbs:
-    - image: /img/asset-1.svg
+    - image: /img/ts-logo-algos.svg
       text: TS Algorithms
       url: js-algorithms
       target: internal
