@@ -1,19 +1,39 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: Mark Fazzio - JAMstack Engineer
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Passionate about creating rich, highly interactive applications using the JAMstack approach; serverless, React, CDN, static site generators, Redux, FaunaDB, etc. 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### Experience
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+**Senior Software Engineer | Fiserv – Parsippany, NJ** **\| *2019 – Present***
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+* Created and currently maintain a framework of functional, company-branded React components written in Typescript, as well as supporting documentation which is utilized by several product teams across the company
+* Lead developer and creator of the EPP React application; in charge of reviewing all incoming code and making necessary technological decisions 
+* Trained developers across the company on React/Typescript best-practices, usage of internal code resources, Git, and other relevant topics 
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+**Senior Application Developer** **\|** ADP – Roseland, NJ **\|** *2015 – 2019*
+
+* Contributed to development of a future-facing AI/ML application for the Innovation Lab using ReactJS / Typescript / Node / Docker / GoLang / GraphQL / Jenkins
+* Created and maintained multiple in-house code frameworks/libraries including a CSS framework, React components library, and a React icons library as well as provided support and documentation for all
+* Developed a custom Wordpress application using the REST API to be the home of UX at ADP and showcase the components as well as garner feedback from teams across the company
+
+**Interactive Developer |** Nickelfish – Mendham, NJ **\|** *2011 – 2015*
+
+* Developed cross-platform-compatible applications using an in-house PHP MVC framework
+* Developed custom Wordpress and Drupal applications, wrote custom PHP code to extend the frameworks per client needs
+* Coded XML layouts for large scale Android applications
+
+### Education
+
+* **M.S. Interactive Design & Media** **\|** Philadelphia University **\|** *May 2010*
+* **B.S. Digital Design** **\|** Philadelphia University **\|** *May 2008*
+
+### Skills
+
+Typescript, React 17+, SCSS/SASS, Gatsby, react-static, styled-components, nodeJS/npm, Rollup, Storybook, Webpack, ESLint, Prettier, Redux, FaunaDB, Netlify, AWS/S3, Stripe, CommerceJS
+
+Git, GitHub/Bitbucket/GitLab, CI/CD, Terminal/iterm/zsh, LAMP stack (PHP, MySQL), Wordpress, Bootstrap, Semantic-UI, ES6 Javascript
+
+Highly skilled in Photoshop, Illustrator, video editing using Final Cut / iMovie / After Effects, music creation & post-production
