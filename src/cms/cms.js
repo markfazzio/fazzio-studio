@@ -12,5 +12,5 @@ CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("code", CodePagePreview);
+CMS.registerPreviewTemplate("ts-algorithms", CodePagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
