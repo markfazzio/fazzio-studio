@@ -2,9 +2,10 @@
 templateKey: about-page
 path: /about
 title: Mark Fazzio - JAMstack Engineer
+description: Passionate about creating rich, highly interactive applications
+  using the JAMstack approach; serverless, React, CDN, static site generators,
+  Redux, FaunaDB, etc.
 ---
-Passionate about creating rich, highly interactive applications using the JAMstack approach; serverless, React, CDN, static site generators, Redux, FaunaDB, etc. 
-
 ### Experience
 
 **Senior Software Engineer | Fiserv – Parsippany, NJ** **\| *2019 – Present***
