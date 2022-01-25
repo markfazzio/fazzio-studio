@@ -1,10 +1,10 @@
 ---
-templateKey: js-algorithms-page
-path: /js-algorithms
+templateKey: code-page
+path: /ts-algorithms
 title: Typescript Algorithms
 description: Answers to common problems using Typescript.
-intro:
-  algorithms:
+content:
+  snippets:
     - description: >-
         Write a function to add parentheses so that all opening and closing
         parentheses
@@ -76,7 +76,8 @@ intro:
           };
         lang: javascript
     - title: Longest Word of a Sentence
-      description: Determine longest word (or words if there is a tie in length) from
+      description:
+        Determine longest word (or words if there is a tie in length) from
         input sentence string
       code:
         code: >-
@@ -96,7 +97,8 @@ intro:
           };
         lang: javascript
     - title: Classic "FizzBuzz"
-      description: 'Loop from start to finish number. For multiples of 3, instead of
+      description:
+        'Loop from start to finish number. For multiples of 3, instead of
         the number, print "Fizz".  For multiples of 5, print "Buzz". For
         multiples of both 3 and 5, return "FizzBuzz". '
       code:
@@ -133,7 +135,8 @@ intro:
           };
         lang: javascript
       title: Capitalize First Letter of Each Word
-      description: Return a string with each word having the first letter capitalized
+      description:
+        Return a string with each word having the first letter capitalized
         from an input string sentence.
     - title: Vowel Checker
       description: Check if letter is a vowel, return a boolean.

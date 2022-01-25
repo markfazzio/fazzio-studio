@@ -14,7 +14,7 @@ intro:
   blurbs:
     - image: /img/ts-logo-algos.svg
       text: TS Algorithms
-      url: js-algorithms
+      url: ts-algorithms
       target: internal
     - image: /img/tcg-app-small.svg
       text: poketcg.app

@@ -8,7 +8,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Layout from "../components/Layout";
 
 // eslint-disable-next-line
-export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
+export const CodePageTemplate = ({ title, description, content }) => {
   return (
     <div>
       <section className="section section--gradient">
@@ -33,12 +33,12 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
       </section>
       <section>
         <div className="code-grid">
-          {intro && intro.algorithms ? (
+          {content && content.snippets ? (
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 1023: 3, 1408: 4 }}
             >
               <Masonry gutter="15px">
-                {intro.algorithms.map((item, index) => (
+                {content.snippets.map((item, index) => (
                   <div
                     className="code-tile box"
                     key={`ts-algorithm-num-${index}`}
@@ -68,31 +68,29 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
   );
 };
 
-JSAlgorithmsPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+CodePageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    algorithms: PropTypes.array,
+  content: PropTypes.shape({
+    snippets: PropTypes.array,
   }),
 };
 
-const JSAlgorithmsPage = ({ data }) => {
+const CodePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <JSAlgorithmsPageTemplate
-        image={frontmatter.image}
+      <CodePageTemplate
         title={frontmatter.title}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        content={frontmatter.content}
       />
     </Layout>
   );
 };
 
-JSAlgorithmsPage.propTypes = {
+CodePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -100,16 +98,16 @@ JSAlgorithmsPage.propTypes = {
   }),
 };
 
-export default JSAlgorithmsPage;
+export default CodePage;
 
 export const pageQuery = graphql`
-  query JSAlgorithmsPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "js-algorithms-page" } }) {
+  query CodePageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "code-page" } }) {
       frontmatter {
         title
         description
-        intro {
-          algorithms {
+        content {
+          snippets {
             title
             description
             code {

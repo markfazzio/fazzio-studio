@@ -19,7 +19,7 @@ const Navbar = () => {
   const isBlogActive = location.pathname.includes("blog");
   const isContactActive = location.pathname.includes("contact");
   const isHomeActive = location.pathname === "/";
-  const isProjectsMenuActive = location.pathname.includes("js-algorithms");
+  const isProjectsMenuActive = location.pathname.includes("ts-algorithms");
 
   return (
     <nav
@@ -71,7 +71,7 @@ const Navbar = () => {
                   className={`${navbarItemClassName} ${
                     isProjectsMenuActive ? navbarItemActiveClassName : ""
                   }`}
-                  to="/js-algorithms"
+                  to="/ts-algorithms"
                 >
                   Typescript Algorithms
                 </Link>

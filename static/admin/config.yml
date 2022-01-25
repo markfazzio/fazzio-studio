@@ -103,27 +103,27 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/js-algorithms/index.md"
-        label: "JS Algorithms Page"
-        name: "js-algorithms"
+      - file: "src/pages/ts-algorithms/index.md"
+        label: "TS Algorithms Page"
+        name: "ts-algorithms"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "js-algorithms-page",
+              default: "code-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
           - {
-              label: Intro,
-              name: intro,
+              label: Content,
+              name: content,
               widget: object,
               fields:
                 [
                   {
-                    label: Algorithms,
-                    name: algorithms,
+                    label: Snippets,
+                    name: snippets,
                     widget: list,
                     fields:
                       [
