@@ -184,4 +184,17 @@ content:
             return total;
           }
         lang: javascript
+    - title: Spread operator to remove array items
+      code:
+        code: |-
+          const seekAndDestroy = (
+            inputArr: Array<any>,
+            removeArr: Array<any>
+          ): Array<any> => {
+            return inputArr.filter((item: any) => !removeArr.includes(item));
+          };
+        lang: typescript
+      description: "Though potentially unsafe for larger data structures, this can be
+        useful on a small scale. This will remove whatever type of params are
+        passed in ...rest operator. "
 ---
