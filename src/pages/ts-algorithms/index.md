@@ -158,4 +158,30 @@ content:
             return result;
           };
         lang: typescript
+    - title: Sum all prime numbers
+      description: Loop using input number as max, sum all prime numbers in that range.
+      code:
+        code: |-
+          const isPrimeNumber = (num: number): boolean => {
+            // numbers greater than 1 are prime
+            for (let i = 2; i < num; i++) {
+              if (num % i === 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          const sumPrimeNumbers = (num: number): number => {
+            let total: number = 0;
+            
+            for (let i = 2; i <= num; i++) {
+              if (isPrimeNumber(i)) {
+                total += i;
+              }
+            }
+            
+            return total;
+          }
+        lang: javascript
 ---
