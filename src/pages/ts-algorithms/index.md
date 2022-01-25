@@ -50,8 +50,8 @@ content:
               ""
             );
           };
-    - title: Simple Palendrome Checker
-      description: Return true if input is palendrome, false if not.
+    - title: Simple Palindrome Checker
+      description: Return true if input is palindrome, false if not.
       code:
         code: |-
           const isPalendrome = (inputString: string): boolean => {
@@ -76,8 +76,7 @@ content:
           };
         lang: javascript
     - title: Longest Word of a Sentence
-      description:
-        Determine longest word (or words if there is a tie in length) from
+      description: Determine longest word (or words if there is a tie in length) from
         input sentence string
       code:
         code: >-
@@ -97,8 +96,7 @@ content:
           };
         lang: javascript
     - title: Classic "FizzBuzz"
-      description:
-        'Loop from start to finish number. For multiples of 3, instead of
+      description: 'Loop from start to finish number. For multiples of 3, instead of
         the number, print "Fizz".  For multiples of 5, print "Buzz". For
         multiples of both 3 and 5, return "FizzBuzz". '
       code:
@@ -135,8 +133,7 @@ content:
           };
         lang: javascript
       title: Capitalize First Letter of Each Word
-      description:
-        Return a string with each word having the first letter capitalized
+      description: Return a string with each word having the first letter capitalized
         from an input string sentence.
     - title: Vowel Checker
       description: Check if letter is a vowel, return a boolean.
