@@ -195,4 +195,46 @@ content:
           };
         lang: typescript
       description: Filter an input array based on an array of remove values.
+    - title: Array sort while ignoring positions
+      description: Sort an array, ignoring certain items if input condition is met.
+      code:
+        code: >-
+          const smartArraySort = (inputArr: Array<any>, itemsToKeep:
+          Array<any>): Array<any> => {
+            const keepIndexes: Array<any> = [];
+            const itemsArray: Array<any> = [];
+            inputArr.forEach((item: any, index: number) => {
+              if (itemsToKeep.includes(item)) {
+                keepIndexes.push(index);
+              } else {
+                itemsArray.push(item);
+              }
+            });
+            return itemsArray.sort((a : any, b : any) => a - b);
+          };
+        lang: typescript
+    - title: Missing Letters
+      description: Find the missing letter in the passed range and return it. Return
+        undefined if entire alphabet passed.
+      code:
+        code: >-
+          const missingLetters = (alphabetStr: string): Array<string> |
+          undefined => {
+            let compareChar: number = alphabetStr.charCodeAt(0);
+            const missing: Array<string> = [];
+            const sortedStrArr: Array<string> = alphabetStr.split('').sort();
+
+            // create letter array, check against charCode
+            sortedStrArr.forEach((_char: string, index: number) => {
+              if (alphabetStr.charCodeAt(index) === compareChar) {
+                ++compareChar;
+              } else {
+                const missingLetter: string = String.fromCharCode(compareChar);
+                if (!missing.includes(missingLetter))
+                missing.push(missingLetter);
+              }
+            });
+            return missing;
+          };
+        lang: typescript
 ---
