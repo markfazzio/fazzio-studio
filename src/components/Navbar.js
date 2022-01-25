@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="navbar-brand">
           <Link
             to="/"
-            className={`${navbarItemClassName} ${
+            className={`navbar-item-home ${navbarItemClassName} ${
               isHomeActive ? navbarItemActiveClassName : ""
             }`}
             title="Fazzio Studio Logo"

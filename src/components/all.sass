@@ -45,7 +45,7 @@ $blue: $fazzio-studio-blue
   right: 50%
   margin: 2em -50vw
   background-size: cover
-  background-position: bottom
+  background-position: center
   display: flex
   justify-content: center
   align-items: center
@@ -161,9 +161,17 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0
 .blog-image
   height: 200px
-.blog-image .title,
-.blog-image .subtitle
-  color: #fff
+  .title,
+  .subtitle
+    color: #fff
+  .page-meta
+    height: 100%
+    width: 100%
+    justify-content: center
+    align-items: center
+    display: flex
+    flex-direction: column
+    background-color: rgba(0,0,0,.7)
 
 // algorithms
 .code-grid

@@ -10,7 +10,12 @@ import Content, { HTMLContent } from "../components/Content";
 import resumeFile from "../img/mark-fazzio-resume.pdf";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title,
+  description,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -19,17 +24,26 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column">
             <div className="box">
-              <div className="columns">
-                <div className="column">
-                  <h1 className="title">{title}</h1>
+              <div className="section">
+                <div className="columns">
+                  <div className="column is-10">
+                    <h1 className="title has-text-primary">{title}</h1>
+                    {description ? (
+                      <p className="subtitle">{description}</p>
+                    ) : undefined}
+                  </div>
+                  <div className="column has-text-right">
+                    <a
+                      className="button button--icon"
+                      href={resumeFile}
+                      download
+                    >
+                      <IconPDF />
+                    </a>
+                  </div>
                 </div>
-                <div className="column has-text-right">
-                  <a className="button button--icon" href={resumeFile} download>
-                    <IconPDF />
-                  </a>
-                </div>
+                <PageContent className="content" content={content} />
               </div>
-              <PageContent className="content" content={content} />
             </div>
           </div>
         </div>
@@ -41,6 +55,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  desription: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
@@ -52,6 +67,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        description={post.frontmatter.description}
         content={post.html}
       />
     </Layout>
@@ -70,6 +86,7 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

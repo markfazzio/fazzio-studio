@@ -101,6 +101,7 @@ collections:
               default: "about-page",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/js-algorithms/index.md"
         label: "JS Algorithms Page"

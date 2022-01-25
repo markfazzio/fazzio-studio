@@ -38,8 +38,11 @@ export const JSAlgorithmsPageTemplate = ({ title, description, intro }) => {
               columnsCountBreakPoints={{ 350: 1, 1023: 3, 1408: 4 }}
             >
               <Masonry gutter="15px">
-                {intro.algorithms.map((item) => (
-                  <div className="code-tile box">
+                {intro.algorithms.map((item, index) => (
+                  <div
+                    className="code-tile box"
+                    key={`ts-algorithm-num-${index}`}
+                  >
                     <p className="title is-size-4">{item.title}</p>
                     <p className="subtitle">
                       <small>{item.description}</small>
